@@ -2,7 +2,7 @@
   "name": "com.ging1991.core",
   "version": "1.0.0",
   "displayName": "Core",
-  "description": "Librería core.",
+  "description": "Librería base para soportar otras liberrías que he creado.",
   "unity": "2021.3",
   "keywords": [
     "time",
@@ -13,6 +13,6 @@
   "author": {
     "name": "Carlos Caballero",
     "email": "tu-email@ejemplo.com",
-    "url": "https://github.com/Ging1991/Core"
+    "url": "https://github.com/Ging1991/Unity-Core.git"
   }
 }

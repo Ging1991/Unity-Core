@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Ging1991.Core {
 
-	public class Estadisticas : SingletonMonoBehaviour<Estadisticas> {
+	public class EstadisticasSingleton : SingletonMonoBehaviour<EstadisticasSingleton> {
 
 		[SerializeField]
 		public Dictionary<string, int> mapaDatos;
@@ -35,6 +35,10 @@ namespace Ging1991.Core {
 
 		public void Incrementar(string codigo) {
 			SetValor(codigo, GetValor(codigo) + 1);
+		}
+
+		public void Decrementar(string codigo) {
+			SetValor(codigo, GetValor(codigo) - 1);
 		}
 
 
