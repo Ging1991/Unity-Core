@@ -1,6 +1,6 @@
 {
 	"name": "com.ging1991.core",
-	"version": "3.1.0",
+	"version": "4.0.0",
 	"displayName": "Ging1991 - Core",
 	"description": "Librería base para soportar otras liberías que he creado.",
 	"unity": "2022.3",
