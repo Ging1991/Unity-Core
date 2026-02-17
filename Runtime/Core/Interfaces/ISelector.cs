@@ -1,8 +1,8 @@
 namespace Ging1991.Core.Interfaces {
 
-	public interface ISelector<T, K> {
+	public interface ISelector<K, V> {
 
-		T GetElemento(string K);
+		V GetElemento(K k);
 
 	}
 
