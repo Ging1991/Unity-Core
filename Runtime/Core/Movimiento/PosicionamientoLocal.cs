@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Ging1991.Core.Interfaces;
+using UnityEngine;
 
 namespace Ging1991.Core.Movimiento {
 
@@ -7,11 +8,11 @@ namespace Ging1991.Core.Movimiento {
 		private readonly float DIFERENCIA_ACEPTABLE = 0.001f;
 		private float velocidad = 0.1f;
 		private bool debePosicionarse = false;
-		private ILlegar accion;
+		private IEjecutable accion;
 		private Vector3 direccion;
 
 
-		public void Posicionar(Vector3 direccion, float velocidad, ILlegar accion = null) {
+		public void Posicionar(Vector3 direccion, float velocidad, IEjecutable accion = null) {
 			this.direccion = direccion;
 			this.accion = accion;
 			this.velocidad = velocidad;
@@ -35,7 +36,7 @@ namespace Ging1991.Core.Movimiento {
 				if (Vector3.Distance(transform.localPosition, direccion) < DIFERENCIA_ACEPTABLE) {
 					debePosicionarse = false;
 					if (accion != null) {
-						accion.Llegar();
+						accion.Ejecutar();
 					}
 				}
 			}

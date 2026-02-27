@@ -1,19 +1,20 @@
 ﻿using System.Collections.Generic;
+using Ging1991.Core.Interfaces;
 using UnityEngine;
 
 namespace Ging1991.Core.Movimiento {
 
-	public class MovimientoConsecutivo : MonoBehaviour, ILlegar {
+	public class MovimientoConsecutivo : MonoBehaviour, IEjecutable {
 
 		private float velocidad = 0.1f;
-		private ILlegar accion;
+		private IEjecutable accion;
 		private List<Vector3> posiciones;
 		private int indice;
 		private PosicionamientoLocal posicionamientoLocal;
 		private bool debeRepetir;
 
 
-		public void Posicionar(List<Vector3> posiciones, float velocidad, ILlegar accion = null, bool debeRepetir = false) {
+		public void Posicionar(List<Vector3> posiciones, float velocidad, IEjecutable accion = null, bool debeRepetir = false) {
 			posicionamientoLocal = GetComponent<PosicionamientoLocal>();
 			this.posiciones = posiciones;
 			this.accion = accion;
@@ -29,11 +30,11 @@ namespace Ging1991.Core.Movimiento {
 		}
 
 
-		public void Llegar() {
+		public void Ejecutar() {
 			indice++;
 			if (indice == posiciones.Count) {
 				if (accion != null) {
-					accion.Llegar();
+					accion.Ejecutar();
 				}
 				if (debeRepetir) {
 					indice = 0;
@@ -41,7 +42,6 @@ namespace Ging1991.Core.Movimiento {
 				}
 			}
 		}
-
 
 	}
 
