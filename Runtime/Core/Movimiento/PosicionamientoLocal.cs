@@ -1,7 +1,7 @@
 ﻿using Ging1991.Core.Interfaces;
 using UnityEngine;
 
-namespace Ging1991.Core.Movimiento {
+namespace Ging1991.Core.Movimiento {//
 
 	public class PosicionamientoLocal : MonoBehaviour {
 
