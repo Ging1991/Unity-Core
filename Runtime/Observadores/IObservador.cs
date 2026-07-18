@@ -1,4 +1,4 @@
-namespace Observadores {
+namespace Ging1991.Core.Observadores {
 
 	public interface IObservador<T> {
 

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Observadores {//
+namespace Ging1991.Core.Observadores {
 
 	public class Observable<T> {
 
